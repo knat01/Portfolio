@@ -1,0 +1,717 @@
+<html>
+    <head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+        
+    body{
+  display:flex;
+  overflow-y: scroll;
+  margin:0;
+  padding:0;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+}
+    @property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+        
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+        
+        
+
+@mixin transition-all {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+     
+        
+        
+.containerB{
+  align-content: center;
+    height: 100%;
+    
+}
+
+.containerB .card{
+    background-color: transparent;
+    align-content: center;
+    
+}
+
+.containerB .card .face{
+  height: 200px;
+  transition:.4s;
+  
+}
+
+.containerB .card .face.face1{
+  position: relative;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+  height: 350px;
+}
+
+.containerB .card:hover .face.face1{
+    width: 100%;
+  transform: translateY(0);
+  box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #D3D3D3,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+}
+
+
+.containerB .card .face.face1 .content{
+  opacity: .2;
+  transition:  0.5s;
+  text-align: center;
+    align-items: center;
+}
+
+
+        
+.containerB .card:hover .face.face1 .content{
+    opacity: 1;
+ 
+}
+
+.containerB .card .face.face1 .content i{
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+   
+}
+
+.containerB .card .face.face1 .content h3{
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  
+
+}
+
+        
+.containerB .card .face.face1 .content a{
+   transition: .5s;
+}
+          
+
+.containerB .card .face.face2{
+    width: 100%;
+   position: relative;
+   background: whitesmoke;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,.8);
+  transform: translateY(-100px);
+    background-color: #0d0d0d;
+      text-align: center;
+}
+
+.containerB .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.containerB .card .face.face2 .content p, a{
+  font-size: 11pt;
+    margin-bottom: 20px;
+  padding: 0;
+  color:white;
+    text-align: center;
+    
+}
+
+.containerB .card .face.face2 .content a{
+  text-decoration:none;
+  color: white;
+  box-sizing: border-box;
+  outline : 1px dashed white;
+  padding: 10px;
+  margin: 15px 0 0;
+  display: inline-block;
+  position: absolute;
+   left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.containerB .card .face.face2 .content a:hover{
+  background: #333 ;
+  color: whitesmoke; 
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+  
+        
+ 
+ 
+        a:hover{
+            color: white;
+        }        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         
+.containerC{
+  align-content: center;
+  font-size: 18px;
+  margin: 50px;
+    
+}
+
+.containerC .card{
+    background-color: transparent;
+    align-content: center;
+    
+}
+
+.containerC .card .face{
+  margin-left: -2.5vh;
+    width:120%;
+  height: 200px;
+  transition:.4s;
+    align-content: center;
+  
+}
+
+.containerC .card .face.face1{
+  position: relative;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+  height: 200px;
+}
+
+.containerC .card:hover .face.face1{
+    width: 120%;
+    align-content: center;
+  transform: translateY(0);
+  box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #D3D3D3,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+}
+
+
+.containerC .card .face.face1 .content{
+  opacity: .2;
+  transition:  0.5s;
+  text-align: center;
+    align-items: center;
+}
+
+
+        
+.containerC .card:hover .face.face1 .content{
+    opacity: 1;
+ 
+}
+
+.containerC .card .face.face1 .content i{
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+    padding: 10px;
+   
+}
+
+.containerC .card .face.face1 .content h3{
+  font-size: 1em;
+  color: white;
+  text-align: center;
+        padding: 10px;
+  
+
+}
+
+        
+.containerC .card .face.face1 .content a{
+   transition: .5s;
+        padding: 10px;
+}
+          
+
+.containerC .card .face.face2{
+    width: 120%;
+   position: relative;
+   background: whitesmoke;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,.8);
+  transform: translateY(-100px);
+    background-color: #0d0d0d;
+      text-align: center;
+}
+
+.containerC .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.containerC .card .face.face2 .content p, a{
+  font-size: 11pt;
+    margin-top: -25px;
+    margin-bottom: 10px;
+  padding: 0;
+  color:white;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.containerC .card .face.face2 .content a{
+  text-decoration:none;
+  color: white;
+  box-sizing: border-box;
+  outline : 1px dashed white;
+  padding: 10px;
+  margin: 15px 0 0;
+  display: inline-block;
+  position: absolute;
+   left: 50%;
+  
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.containerC .card .face.face2 .content a:hover{
+  background: #333 ;
+  color: whitesmoke; 
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+  
+              
+       
+        
+        
+.cardnew {
+    box-shadow: 0 3px 30px rgb(0 0 0 / 1);
+  background: #333;
+  width: 15vh;
+  height: 15vh;
+    
+ align-content: center;
+  background: url(https://media.discordapp.net/attachments/766807837950607370/923778354090475530/unknown.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50%;
+
+}
+
+.cardnew:hover {
+  
+  transition: color 1s;
+}
+.cardnew:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+    
+}
+
+
+.cardnew1 {
+    position:absolute;
+  align-content: center;
+  z-index: -1;
+  width: 16.5vh;
+  height: 16.5vh;
+    margin-left:-4.7px;
+    margin-top: -4.7px;
+  transform: scale(1);
+    border-radius: 50%;
+  filter: brightness(100%);
+  background-image: linear-gradient(
+    var(--rotate)
+    ,  #0ff, #f0f 54%, #0ff);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+  transition: color 1s;
+}   
+        
+.raise:hover,
+.raise:focus {
+  box-shadow: inset 0 0 15px whitesmoke,
+    inset 10px 0 40px #f0f,
+    inset -10px 0 40px #0ff,
+    inset 10px 0 150px #f0f,
+    inset -10px 0 150px #0ff,
+    0 0 25px #D3D3D3,
+    -5px 0 40px #f0f,
+    5px 0 40px #0ff;
+  transform: translateY(-1em);
+    opacity: 1;
+    align-content: center;
+    
+}        
+        
+
+button {  
+    background: #0d0d0d;
+    border: linear-gradient(
+    var(--rotate)
+    ,  #0ff, #f0f 54%, #0ff);
+  font: inherit;
+  line-height: 1.3;
+  margin: 0.5em;
+  padding: 0.5em 3em;
+  color: white;
+  transition: 0.25s;
+  align-content: center;  
+    margin: 3vh;
+    min-width: 220px;
+    border-image: linear-gradient(45deg, blue 0%, pink 100%);
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+  
+  }  
+        
+        
+ul {
+  position:relative;
+  bottom: 10px;
+  left:50%;
+  transform:translate(-50%);
+  display:flex;
+  margin:0;
+  padding:0;
+}
+
+ul li {
+  list-style:none;
+  margin:0 20px;
+}
+
+ul li a .fa {
+  font-size: 20px;
+  color: #333333;
+  line-height: 50px;
+  transition: .5s;
+  padding-right: 14px;
+}
+
+ul li a span {
+  padding:0;
+  margin:0;
+  position:absolute;
+  top: 15px;
+  color: #333333;
+  letter-spacing: 4px;
+  transition: .5s;
+}
+
+ul li a {
+  text-decoration: none;
+  display:absolute;
+  display:block;
+  width:150px;
+  height:50px;
+  background: #fff;
+  text-align:left;
+  padding-left: 20px;
+  transform: rotate(-30deg) skew(25deg) translate(0,0);
+  transition:.5s;
+  box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+        
+ul li a:before {
+  content: '';
+  position: absolute;
+  top:10px;
+  left:-20px;
+  height:100%;
+  width:20px;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+        
+ul li a:after {
+  content: '';
+  position: absolute;
+  bottom:-20px;
+  left:-10px;
+  height:20px;
+  width:100%;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+}
+
+ul li:hover .fa {
+  color:#fff;
+}
+
+ul li:hover span {
+  color:#fff;
+}
+
+ul li:hover:nth-child(1) a{
+  background: #171515;
+}
+ul li:hover:nth-child(1) a:before{
+  background: #020202;
+}
+ul li:hover:nth-child(1) a:after{
+  background: #2c2828;
+}
+
+ul li:hover:nth-child(2) a{
+  background: #0e76a8;
+}
+ul li:hover:nth-child(2) a:before{
+  background: #095072;
+}
+ul li:hover:nth-child(2) a:after{
+  background: #19a7ec;
+}
+            
+        
+        
+    </style>
+    
+        <body>
+<script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+<div class="container">
+    <div style="margin-top: 5vh; margin-bottom: 5vh;" class="col-sm-12 justify-content-center">
+        <a style="color: white;"><h1><b>&lt;Shaun Sequeira Portfolio&gt;</b></h1></a>
+
+        </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-sm-offset-2 col-sm-8 justify-content-center " style="align-content: center;">
+        <button class="raise"><a href="#aboutme" style="text-decoration: none;  "><h4><b>About Me</b></h4></a></button> 
+            <button class="raise"> <a href="#projects" style="text-decoration: none;"><h4><b>Projects</b></h4></a></button> 
+            <button class="raise"><a href="#socials" style="text-decoration: none;"><h4><b>Socials</b></h4></a></button>
+        </div>
+    </div>
+        <div style="margin-top: 4vh;" class="row justify-content-center">
+
+        <div class="col-sm-offset-2 col-sm-8 justify-content-center ">
+        <div class="containerB justify-content-center">
+              
+     <div id="aboutme" class="card justify-content-center">
+         
+       <div style="width: 100% ;" class="face face1 justify-content-center">
+
+             <div class="cardnew justify-content-center"><div class="cardnew1 justify-content-center"></div></div>
+
+           </div>
+         <div style="width: 100%;" id="projects" class="face face2">
+         <div class="content">
+             <h3 style="margin-top: -40px; color: white;"><b>About Me</b></h3>
+             <p> A solution-oriented student enrolled in computer science adept at motivating self and others. Passionate
+about computer technology and would like to be among the next generation of technology innovators.
+Dedicated team contributor with a talent for managing deadlines.
+             </p>
+  <a href="https://docdro.id/mtDET9i" class="btnresume"><span><b>Resume</b></span></a>
+         </div>
+       </div>
+       </div>
+    </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        
+        
+        
+        
+        
+        <div class="containerC col-sm-3 ">
+            
+            <div class="card">
+       <div class="face face1">
+         <div class="content">
+            <i class="fa fa-github" aria-hidden="true"></i>          
+           <h3><b>Crowdidact</b></h3>
+         </div>
+       </div>
+         
+       <div class="face face2">
+         <div class="content">
+           <p> CrowDidact is a crowd-sourced &amp; automated learning platform.
+It allows creation of courses that are auto-populated with content simply by entering the name of the subject.</p>
+           <a href="https://github.com/RayElg/crowDidact" type="button">Read More</a>
+         </div>
+       </div>
+    </div>
+        
+        </div>
+        
+        
+        
+        <div class="containerC col-sm-offset-1 col-sm-3">
+            
+        <div class="card">
+       <div class="face face1">
+         <div class="content">
+      <i class="fa fa-github" aria-hidden="true"></i>               
+        <h3><b>Github - Knat01</b></h3>
+         </div>
+       </div>
+       <div class="face face2">
+         <div class="content">
+             <p> My Github Profile
+             </p>
+           <a href="https://github.com/knat01" type="button"> Github </a>
+         </div>
+       </div>
+    </div>
+        
+        </div>
+        
+        <div class="containerC col-sm-offset-1 col-sm-3">
+        
+        <div class="card">
+       <div class="face face1">
+         <div class="content">
+           <i class="fa fa-github" aria-hidden="true"></i>
+            <h3><b>Ultimate Foods</b></h3>
+         </div>
+       </div>
+       <div class="face face2">
+         <div class="content">
+           <p> Used HTML CSS and Bootstraps to create a food website for a university web-development course.</p>
+           <a href="https://github.com/knat01/Ultimate-Foods" type="button">Read More</a>
+         </div>
+       </div>
+    </div>
+        </div>
+        
+        
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+        
+     
+        
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div id="socials" class="col-sm-offset-3 col-sm-6 justify-content-center">
+         <ul style=" margin-top: 20vh; margin-bottom: 8vh;" class="justify-content-center">
+  <li>
+    <a href="https://github.com/knat01">
+      <i style="margin-top: -8px;" class="fa fa-github" aria-hidden="true"></i>
+      <span>  Github</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/shaunsequeira08/">
+      <i style="margin-top: -8px;" class="fa fa-linkedin" aria-hidden="true"></i>
+      <span style="margin-top: -4px;"> LinkedIn</span>
+    </a>
+  </li>
+    </ul>
+   
+            
+        </div>
+    </div>
+    </div>
+                <script>function createBackground(depth) {
+  return new Promise((resolve, reject) => {
+    const canvas = document.createElement("canvas");
+    canvas.width = 256;
+    canvas.height = 256;
+    const context = canvas.getContext("2d");
+    context.clearRect(0,0,canvas.width,canvas.height);
+    for (let i = 0; i < 100; i++) {
+      const x = (Math.random() * canvas.width);
+      const y = (Math.random() * canvas.height);
+      context.fillStyle = `rgb(${depth},${depth},${depth})`;
+      context.fillRect(x,y,1,1);
+    }
+    canvas.toBlob((blob) => {
+      return resolve(URL.createObjectURL(blob));
+    }, "image/png");
+  });  
+}
+
+const bgs = [];
+
+let sx = 0, sy = 0;
+
+function frame() {
+  sx += 2;
+  sy += 2;
+  
+  document.body.style.backgroundPositionX = bgs.map((bg, index, list) => {
+    return `${sx * (index + 1) * (1 / list.length)}px`;
+  }).join(",");
+  document.body.style.backgroundPositionY = bgs.map((bg, index, list) => {
+    return `${sy * (index + 1) * (1 / list.length)}px`;
+  }).join(",");
+  
+  requestAnimationFrame(frame);
+}
+
+Promise.all([
+ 
+  
+  createBackground(256)
+]).then(([bg0,bg1,bg2]) => {
+  requestAnimationFrame(frame);
+  bgs.push([bg0],[bg1],[bg2]);
+  document.body.style.backgroundImage = bgs.map(([url]) => `url(${url})`).join(",");
+  console.log(bg0,bg1,bg2);
+});
+</script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+            
+</body></html>
